@@ -87,10 +87,10 @@ export default function About() {
                       Node.js
                     </Badge>
                     <Badge variant="secondary" className="bg-green-600/20 text-green-300 border-green-500/30">
-                      Python
+                      Spring Boot
                     </Badge>
                     <Badge variant="secondary" className="bg-green-600/20 text-green-300 border-green-500/30">
-                      Core Java
+                      MySQL
                     </Badge>
                     <Badge variant="secondary" className="bg-green-600/20 text-green-300 border-green-500/30">
                       MongoDB
@@ -101,10 +101,10 @@ export default function About() {
                   <h3 className="text-lg font-semibold text-white mb-3">Specialized Skills</h3>
                   <div className="flex flex-wrap gap-2">
                     <Badge variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
-                      AI/ML
+                      Next.js
                     </Badge>
                     <Badge variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
-                      Data Analysis
+                      Spring Boot
                     </Badge>
                     <Badge variant="secondary" className="bg-purple-600/20 text-purple-300 border-purple-500/30">
                       Excel

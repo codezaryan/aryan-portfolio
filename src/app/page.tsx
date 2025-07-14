@@ -5,19 +5,100 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Briefcase, User, Mail } from "lucide-react"
 
 export default function Home() {
-  const skills = [
-    "JavaScript",
-    "Next.js",
-    "React.js",
-    "Node.js",
-    "Core Java",
-    "PostgreSQL",
-    "MongoDB",
-    "Tailwind CSS",
-    "Redux",
-    "REST APIs",
-    "Git",
-    "SQL",
+  const skillCategories = [
+    {
+      title: "Programming Languages",
+      skills: [
+        "C/C++",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "Java (Core & Enterprise)",
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      title: "Frontend Development",
+      skills: [
+        "React.js",
+        "Next.js",
+        "Redux/Toolkit",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Framer Motion",
+        "React Testing Library"
+      ]
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        "Node.js (Express/Nest)",
+        "Spring Boot",
+        "Django (Python)",
+        "RESTful APIs",
+        "GraphQL",
+        "Microservices",
+        "WebSockets"
+      ]
+    },
+    {
+      title: "Java Stack",
+      skills: [
+        "Spring Framework",
+        "Spring Security",
+        "Hibernate/JPA",
+        "Maven/Gradle",
+        "Jakarta EE",
+        "JUnit/Mockito"
+      ]
+    },
+    {
+      title: "JavaScript/TypeScript Stack",
+      skills: [
+        "Full-Stack React",
+        "Next.js App Router",
+        // "tRPC",
+        "Prisma ORM",
+        "Express.js",
+        "Jest/Vitest"
+      ]
+    },
+    {
+      title: "DevOps & Cloud",
+      skills: [
+        "Docker",
+        "Kubernetes",
+        "AWS (EC2, S3, Lambda)",
+        "CI/CD Pipelines",
+        // "Terraform",
+        // "NGINX",
+        // "Prometheus/Grafana"
+      ]
+    },
+    {
+      title: "Databases",
+      skills: [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        // "Redis",
+        // "Firebase",
+        // "Elasticsearch",
+        // "Neo4j (Graph DB)"
+      ]
+    },
+    {
+      title: "Tools & Platforms",
+      skills: [
+        "Git/GitHub/GitLab",
+        "VS Code/IntelliJ",
+        "Postman/Insomnia",
+        "Figma/Adobe XD",
+        // "Jira/Trello",
+        "Linux/Bash",
+        // "Datadog/Sentry"
+      ]
+    }
   ]
 
   return (
@@ -56,9 +137,9 @@ export default function Home() {
         <div className="container mx-auto text-center">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Aryan Patel</h1>
-            <h2 className="text-3xl md:text-4xl font-semibold text-purple-300 mb-4">Software Engineer</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-purple-300 mb-4">Software Developer</h2>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              CSE Graduate (2020-2024) with CGPA 8.12 | Passionate about creating innovative full-stack solutions
+              Passionate about creating innovative full-stack solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/projects">
@@ -84,16 +165,26 @@ export default function Home() {
       <section className="py-20 px-6">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">Technical Skills</h2>
-          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-            {skills.map((skill, index) => (
-              <Badge
-                key={skill}
-                variant="secondary"
-                className="text-lg px-6 py-3 bg-white/10 text-white border-white/20 hover:bg-white/20 transition-all duration-300 animate-slide-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {skillCategories.map((category, index) => (
+              <div
+                key={index}
+                className="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-purple-400/30 transition-all duration-300"
               >
-                {skill}
-              </Badge>
+                <h3 className="text-2xl font-semibold text-purple-300 mb-4">{category.title}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <Badge
+                      key={skillIndex}
+                      variant="secondary"
+                      className="text-base px-4 py-2 bg-white/10 text-white border-white/20 hover:bg-white/20 transition-all"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
