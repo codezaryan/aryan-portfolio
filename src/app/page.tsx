@@ -36,7 +36,6 @@ export default function Home() {
         "Spring Boot",
         "Django (Python)",
         "RESTful APIs",
-        "GraphQL",
         "Microservices",
         "WebSockets"
       ]
@@ -57,22 +56,17 @@ export default function Home() {
       skills: [
         "Full-Stack React",
         "Next.js App Router",
-        // "tRPC",
         "Prisma ORM",
         "Express.js",
-        "Jest/Vitest"
       ]
     },
     {
       title: "DevOps & Cloud",
       skills: [
         "Docker",
-        "Kubernetes",
-        "AWS (EC2, S3, Lambda)",
+        "Kubernetes (Learning)",
+        "AWS (Learning)",
         "CI/CD Pipelines",
-        // "Terraform",
-        // "NGINX",
-        // "Prometheus/Grafana"
       ]
     },
     {
@@ -81,10 +75,7 @@ export default function Home() {
         "PostgreSQL",
         "MySQL",
         "MongoDB",
-        // "Redis",
-        // "Firebase",
-        // "Elasticsearch",
-        // "Neo4j (Graph DB)"
+        "Oracle",
       ]
     },
     {
@@ -94,9 +85,7 @@ export default function Home() {
         "VS Code/IntelliJ",
         "Postman/Insomnia",
         "Figma/Adobe XD",
-        // "Jira/Trello",
         "Linux/Bash",
-        // "Datadog/Sentry"
       ]
     }
   ]
