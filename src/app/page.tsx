@@ -10,9 +10,8 @@ export default function Home() {
       title: "Programming Languages",
       skills: [
         "C/C++",
-        "JavaScript (ES6+)",
-        "TypeScript",
-        "Java (Core & Enterprise)",
+        "JS/TS",
+        "Java ",
         "Python",
         "SQL"
       ]
@@ -20,41 +19,26 @@ export default function Home() {
     {
       title: "Frontend Development",
       skills: [
-        "React.js",
+        "React",
         "Next.js",
-        "Redux/Toolkit",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Framer Motion",
-        "React Testing Library"
-      ]
-    },
-    {
-      title: "Backend Development",
-      skills: [
-        "Node.js (Express/Nest)",
-        "Spring Boot",
-        "Django (Python)",
-        "RESTful APIs",
-        "Microservices",
-        "WebSockets"
+        "Redux",
+        "Tailwind",
       ]
     },
     {
       title: "Java Stack",
       skills: [
-        "Spring Framework",
-        "Spring Security",
+        "Spring Boot",
         "Hibernate/JPA",
         "Maven/Gradle",
-        "Jakarta EE",
-        "JUnit/Mockito"
+        "REST API's",
+        "JUnit",
       ]
     },
     {
       title: "JavaScript/TypeScript Stack",
       skills: [
-        "Full-Stack React",
+        "Node.js",
         "Next.js App Router",
         "Prisma ORM",
         "Express.js",
@@ -64,8 +48,8 @@ export default function Home() {
       title: "DevOps & Cloud",
       skills: [
         "Docker",
-        "Kubernetes (Learning)",
-        "AWS (Learning)",
+        "Kubernetes*",
+        "AWS*",
         "CI/CD Pipelines",
       ]
     },
@@ -81,11 +65,12 @@ export default function Home() {
     {
       title: "Tools & Platforms",
       skills: [
-        "Git/GitHub/GitLab",
+        "Git/GitHub",
+        "GitLab",
         "VS Code/IntelliJ",
-        "Postman/Insomnia",
+        "Postman",
         "Figma/Adobe XD",
-        "Linux/Bash",
+        "Linux",
       ]
     }
   ]

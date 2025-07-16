@@ -2,13 +2,14 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Download, Mail, Phone, MapPin, Globe, Github, Linkedin, Trophy } from "lucide-react"
+import DownloadResume from "../components/DownloadResume"
 
 export default function Resume() {
   const experience = [
     {
-      title: "Web Developer Intern",
+      title: "Web Developer",
       company: "IKSC (Pune) - Full Stack Web Developer",
-      period: "Aug 2024 - Feb 2025",
+      period: "July 2024 - June 2025",
       description: [
         "Gained hands-on experience in full-stack web development using JavaScript, TypeScript, React, Next.js, Node.js, and Tailwind CSS",
         "Designed and developed responsive, user-friendly websites ensuring optimal performance across multiple devices",
@@ -21,50 +22,45 @@ export default function Resume() {
   ]
 
   const projects = [
-    {
-      title: "ReserveTable",
-      technologies: ["Next.js", "PostgreSQL", "Google Maps API"],
-      description:
-        "Full-stack restaurant booking application with real-time confirmations and 30% improved query response time",
-    },
-    {
-      title: "Task Manager",
-      technologies: ["Next.js", "MongoDB", "JWT"],
-      description: "Task management app with real-time tracking, deadline notifications, and role-based access control",
-    },
-    {
-      title: "Portfolio/Landing Page",
-      technologies: ["Next.js", "Tailwind CSS"],
-      description: "Responsive personal portfolio and dynamic landing pages with fast load times",
-    },
-  ]
+  {
+    title: "ReserveTable",
+    technologies: ["Next.js", "PostgreSQL", "Google Maps API"],
+    description:
+      "Full-stack restaurant booking application with real-time confirmations and 30% improved query response time",
+  },
+  {
+    title: "Task Manager",
+    technologies: ["Next.js", "MongoDB", "JWT"],
+    description: "Task management app with real-time tracking, deadline notifications, and role-based access control",
+  },
+  {
+    title: "User Management System",
+    technologies: ["Spring Boot", "React.js", "MySQL"],
+    description: "Comprehensive user management platform with secure authentication and CRUD operations",
+  }
+];
 
   const skills = {
-    "Development Tools": [
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "JavaScript",
-      "React.js",
+    "Development Skills": [
+      "React",
       "Redux",
-      "REST APIs",
+      "REST API's",
       "Next.js",
+      "Spring Boot",
       "Node.js",
+      "MySQL",
       "PostgreSQL",
       "MongoDB",
-      "GitHub Actions",
-      "Git",
-      "Postman",
     ],
     "Programming Languages": ["Core Java", "JavaScript", "SQL"],
-    "Operating Systems & Platforms": ["Windows", "MacOS", "Linux", "Android Studio", "VS Code", "IntelliJ", "MS Excel"],
+    "Operating Systems & Platforms": ["Windows", "Linux", "Android Studio", "VS Code", "IntelliJ", "MS Excel"],
   }
 
   const certifications = [
-    "Python Certificate - GUVI and Google for Education",
-    "AI For India 2.0 - GUVI and Skill India",
-    "SQL (Basic) Certificate - HackerRank",
-    "3 Star in Java Problem-solving - HackerRank",
+    "Python Certificate - Google for Education",
+    "AI For India 2.0 - Skill India",
+    "SQL Certificate - HackerRank",
+    "Java Master Class - Udemy",
   ]
 
   return (
@@ -72,11 +68,9 @@ export default function Resume() {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-6 animate-fade-in-up">Resume</h1>
-          <Button className="bg-purple-600 hover:bg-purple-700 animate-fade-in-up">
-            <Download className="w-4 h-4 mr-2" />
-            Download PDF
-          </Button>
+          <h1 className="text-5xl font-bold text-white mb-6 cursor-pointer animate-fade-in-up">Resume</h1>
+          <DownloadResume />
+
         </div>
 
         {/* Contact Information */}
@@ -101,7 +95,7 @@ export default function Resume() {
               </div>
               <div className="flex items-center justify-center text-gray-300">
                 <Globe className="w-4 h-4 mr-2" />
-                aryanpatel.dev
+                codezaryan.netlify.app
               </div>
               <div className="flex items-center justify-center text-gray-300">
                 <Github className="w-4 h-4 mr-2" />
@@ -120,29 +114,47 @@ export default function Resume() {
           <CardContent className="p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Professional Summary</h3>
             <p className="text-gray-300 leading-relaxed">
-              Computer Science Engineering graduate with CGPA 8.12 and hands-on experience in full-stack web
-              development. Proficient in modern technologies including JavaScript, React, Next.js, Node.js, and
-              databases like PostgreSQL and MongoDB. Demonstrated expertise through internship at IKSC (Pune) and
-              successful project implementations. Consistently high academic performer with proven problem-solving
-              skills and certifications in Python, AI, and SQL. Passionate about creating scalable web applications and
-              eager to contribute to innovative development teams.
+              Full-Stack Developer with experience building scalable web applications using modern technologies. Skilled in Java,
+              Spring Boot, and React.js/Next.js with a strong focus on creating efficient RESTful APIs, optimizing database
+              performance, and delivering responsive user interfaces. Passionate about clean code architecture and implementing best
+              practices in software development.
             </p>
           </CardContent>
         </Card>
 
-        {/* Education */}
-        <Card className="bg-white/10 border-white/20 mb-8 animate-slide-in-up">
-          <CardContent className="p-8">
-            <h3 className="text-2xl font-bold text-white mb-6">Education</h3>
-            <div className="border-l-2 border-purple-400 pl-6 pb-6">
-              <h3 className="text-lg font-semibold text-white">B.Tech - Computer Science Engineering</h3>
-              <p className="text-purple-300">Oriental Institute Of Science and Technology, Jabalpur</p>
-              <p className="text-gray-400">2020 - 2024</p>
-              <p className="text-gray-300">CGPA: 8.12/10</p>
-              <p className="text-gray-400">Bhopal, Madhya Pradesh</p>
-            </div>
-          </CardContent>
-        </Card>
+     {/* Education */}
+<Card className="bg-white/10 border-white/20 mb-8 animate-slide-in-up">
+  <CardContent className="p-8">
+    <h3 className="text-2xl font-bold text-white mb-6">Education</h3>
+    
+    {/* B.Tech */}
+    <div className="border-l-2 border-purple-400 pl-6 pb-6">
+      <h3 className="text-lg font-semibold text-white">B.Tech - Computer Science Engineering</h3>
+      <p className="text-purple-300">Oriental Institute Of Science and Technology, Jabalpur</p>
+      <p className="text-gray-400">2020 - 2024</p>
+      <p className="text-gray-300">CGPA: 8.12/10</p>
+      <p className="text-gray-400">Bhopal, Madhya Pradesh</p>
+    </div>
+    
+    {/* 12th */}
+    <div className="border-l-2 border-purple-400 pl-6 pb-6">
+      <h3 className="text-lg font-semibold text-white">Higher Secondary Education (12th)</h3>
+      <p className="text-purple-300">MPBSE, Bhopal</p>
+      <p className="text-gray-400">2018 - 2020</p>
+      <p className="text-gray-300">Percentage: 84.4%</p>
+      <p className="text-gray-400">Madhya Pradesh</p>
+    </div>
+    
+    {/* 10th */}
+    <div className="border-l-2 border-purple-400 pl-6">
+      <h3 className="text-lg font-semibold text-white">Secondary Education (10th)</h3>
+      <p className="text-purple-300">MPBSE, Bhopal</p>
+      <p className="text-gray-400">2018</p>
+      <p className="text-gray-300">Percentage: 86.6%</p>
+      <p className="text-gray-400">Madhya Pradesh</p>
+    </div>
+  </CardContent>
+</Card>
 
         {/* Experience */}
         <Card className="bg-white/10 border-white/20 mb-8 animate-slide-in-up">
@@ -230,11 +242,11 @@ export default function Resume() {
             <div className="space-y-3">
               <div className="flex items-center p-3 bg-white/5 rounded-lg">
                 <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                <span className="text-gray-300">Consistently achieved Top 3 position in academic career</span>
+                <span className="text-gray-300">Top 3 in B.Tech, 12th, 10th with securing A+ Grade</span>
               </div>
               <div className="flex items-center p-3 bg-white/5 rounded-lg">
                 <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                <span className="text-gray-300">3 Star rating in Java problem-solving on HackerRank</span>
+                <span className="text-gray-300">4 Star rating in Java problem-solving on HackerRank</span>
               </div>
             </div>
           </CardContent>

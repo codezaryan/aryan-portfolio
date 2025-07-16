@@ -118,11 +118,11 @@ export default function Contact() {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    Full-Stack Development
+                    Mobile/Desktop Application Development
                   </li>
-                  <li className="flex items-center">
+                    <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    Frontend Development
+                    Website Development
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
@@ -130,7 +130,7 @@ export default function Contact() {
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
-                    Data Analysis
+                    Ethical Hacking
                   </li>
                 </ul>
               </CardContent>

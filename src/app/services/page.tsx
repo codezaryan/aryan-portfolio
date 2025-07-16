@@ -9,14 +9,14 @@ export default function Services() {
       title: "Full-Stack Web Development",
       description:
         "End-to-end web application development using modern technologies like Next.js, React, Node.js, and databases.",
-      skills: ["Next.js", "React", "Node.js", "MongoDB", "PostgreSQL"],
+      skills: ["Next.js", "React", "Node.js", "Spring Boot", "MySQL", "Web UI/UX"],
       deliverables: ["Responsive web applications", "RESTful APIs", "Database design", "Deployment & hosting"],
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
       description: "Cross-platform mobile applications using React Native and modern mobile development practices.",
-      skills: ["React Native", "TypeScript", "Mobile UI/UX"],
+      skills: ["React Native", "TypeScript", "Spring Boot", "MySQL", "Mobile UI/UX"],
       deliverables: ["iOS & Android apps", "App store deployment", "Push notifications", "Offline functionality"],
     },
     {

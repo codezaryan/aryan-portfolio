@@ -26,12 +26,11 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <h3 className="text-2xl font-bold text-white mb-4">Aryan Patel</h3>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Computer Science Engineering Graduate (2020-2024) with CGPA 8.12. Passionate full-stack developer
-              specializing in modern web technologies and creating innovative digital solutions.
+              Full-Stack Developer with experience building scalable web applications using modern technologies. Skilled in Java, Spring Boot, and React.js/Next.js with a strong focus on creating efficient RESTful APIs, optimizing database performance, and delivering responsive user interfaces. Passionate about clean code architecture and implementing best practices in software development.
             </p>
             <div className="flex items-center text-gray-300 mb-2">
               <MapPin className="w-4 h-4 mr-2 text-purple-400" />
-              <span>Katni, Madhya Pradesh, India</span>
+              <span>Bengaluru, India</span>
             </div>
             <div className="flex items-center text-gray-300 mb-2">
               <Mail className="w-4 h-4 mr-2 text-purple-400" />
@@ -112,7 +111,7 @@ export default function Footer() {
               <Heart className="h-4 w-4 mx-1 text-red-400" fill="currentColor" />
               using Next.js & Tailwind CSS
             </p>
-            <p className="text-sm text-gray-400 mt-1">CSE Graduate | CGPA 8.12 | Full-Stack Developer</p>
+            <p className="text-sm text-gray-400 mt-1">Aryan Patel | Software Engineer | Full-Stack Developer</p>
           </div>
         </div>
       </div>
