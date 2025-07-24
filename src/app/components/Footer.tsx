@@ -34,7 +34,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900/80 to-slate-900 border-t border-white/10 mt-20 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900/80 to-slate-900 border-t border-white/10  relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-purple-900/20 blur-[80px]"></div>
@@ -52,7 +52,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold text-white">Aryan Patel</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Full-Stack Developer specializing in building high-performance web applications with modern technologies like Java, Spring Boot, and React.js/Next.js. Focused on creating efficient architectures and exceptional user experiences.
+              Full-Stack Developer specializing in building high-performance applications with modern technologies.
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">

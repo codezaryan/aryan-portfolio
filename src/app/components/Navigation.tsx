@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X, Home, User, MessageSquare, Code, Briefcase, FileText, Mail } from "lucide-react"
+import { Menu, X,  User, MessageSquare, Code, Briefcase, FileText, Mail } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navigation() {

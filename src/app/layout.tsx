@@ -9,14 +9,13 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Aryan Patel - Software Engineer Portfolio",
-  description:
-    "Computer Science Engineering Graduate (2020-2024) with CGPA 8.12 - Showcasing skills in JavaScript, Next.js, React, Node.js, and full-stack development",
+  description:"Full-Stack Developer specializing in building high-performance applications",
   keywords:
-    "Aryan Patel, software engineer, web developer, JavaScript, Next.js, React, Node.js, PostgreSQL, MongoDB, full-stack developer, CSE graduate",
+    "Aryan Patel, Software Engineer, Java Full Stack Developer, MERN Stack Developer, Native App Developer",
   authors: [{ name: "Aryan Patel" }],
   openGraph: {
     title: "Aryan Patel - Software Engineer Portfolio",
-    description: "CSE Graduate with expertise in full-stack web development",
+    description: "Full-Stack Developer specializing in building high-performance applications",
     type: "website",
   },
 }

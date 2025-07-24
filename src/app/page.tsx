@@ -4,88 +4,7 @@ import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Briefcase, Github, ExternalLink,  MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock } from "lucide-react";
 export default function Home() {
-  //   const skillCategories = [
-  //   {
-  //     title: "Core Languages",
-  //     skills: ["C/C++","Java", "Python", "JavaScript/TypeScript", "SQL", "Bash/Shell"]
-  //   },
-  //   {
-  //     title: "Java Full Stack",
-  //     skills: [
-  //       "Spring Boot (Microservices, REST APIs)", 
-  //       "Hibernate/JPA", 
-  //       "Maven/Gradle", 
-  //       "MySQL",
-  //       "Next.js /React"
-  //     ]
-  //   },
-  //   {
-  //     title: "MERN & Next.js",
-  //     skills: [
-  //       "MongoDB/PostgreSQL", 
-  //       "Express.js",
-  //       "React.js/Next.js", 
-  //       "Node.js", 
-  //       "Redux/TanStack Query"
-  //     ]
-  //   },
-  //   {
-  //     title: "Mobile (React Native)",
-  //     skills: [
-  //       "React Native (Expo)", 
-  //       "Firebase Integration", 
-  //       "Mobile State Management"
-  //     ]
-  //   },
-  //   { 
-  //     title: "DevOps & Cloud",
-  //     skills: [
-  //       "Docker/Kubernetes*", 
-  //       "AWS*", 
-  //       "CI/CD (GitHub Actions/GitLab)", 
-  //     ]
-  //   },
-  //   {
-  //     title: "Security & Hacking",
-  //     skills: [
-  //       "Kali Linux (Metasploit, Burp Suite)", 
-  //       "Penetration Testing/Nmap", 
-  //       "Ethical Hacking Fundamentals"
-  //     ]
-  //   },
-  //   {
-  //     title: "AI/ML & Data",
-  //     skills: [
-  //       "Python (Pandas, NumPy)", 
-  //       "TensorFlow/PyTorch*", 
-  //       "SQL", 
-  //     ]
-  //   },
-  // {
-  //     title: "Productivity & Office Tools",
-  //     skills: [
-  //       "MS Word ",
-  //       "Email",
-  //       "MS Excel Advanced",
-  //     ]
-  //   },
-  //   {
-  //     title: "Design",
-  //     skills: [
-  //       "App/Web Design",
-  //       "Figma/Adobe XD", 
-  //     ]
-  //   },
-  //   {
-  //     title: "Tools",
-  //     skills: [
-  //       "Git/GitLab/GitHub", 
-  //       "Postman", 
-  //       "VS Code/IntelliJ Idea", 
-  //       "Linux/CLI"
-  //     ]
-  //   }
-  // ];
+
   const skillCategories = [
     {
       title: "Core Technologies",
@@ -96,7 +15,7 @@ export default function Home() {
     {
       title: "Java Full Stack Development",
       icon: <Code className="w-6 h-6 text-blue-400" />,
-      skills: ["Spring Boot", "Hibernate/JPA", "MySQL","Next.js","React", "Redux"],
+      skills: ["Spring Boot", "Hibernate/JPA", "MySQL","React", "Redux"],
       color: "from-blue-500/10 to-blue-800/10"
     },
     {
@@ -176,7 +95,7 @@ export default function Home() {
             <div className="max-w-2xl mx-auto">
               <p className="text-xl md:text-2xl text-gray-300 mb-10 relative inline-block">
                 <span className="relative">
-                  Passionate about creating innovative full-stack solutions
+                  Passionate about creating innovative full-stack solutionss
                   <span className="absolute right-0 top-0 w-1 h-8 bg-purple-400 animate-blink"></span>
                 </span>
               </p>
@@ -265,7 +184,7 @@ export default function Home() {
           </div>
 
           <div className="mt-16 text-center">
-            <Link href="/skills">
+            <Link href="/about">
               <Button
                 size="lg"
                 className="relative overflow-hidden group px-8 py-6 text-lg bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
