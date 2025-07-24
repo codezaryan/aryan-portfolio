@@ -1,4 +1,3 @@
-// src/components/DownloadResume.tsx
 'use client';
 
 import { saveAs } from 'file-saver';
@@ -7,7 +6,7 @@ import { Download } from "lucide-react";
 
 export default function DownloadResume() {
   const handleDownload = () => {
-    saveAs('/assets/aryan_resume.pdf', 'aryan_resume.pdf');
+    saveAs('/assets/Aryan_Patel_Resume.pdf', 'Aryan_Patel_Resume.pdf');
   };
 
   return (
