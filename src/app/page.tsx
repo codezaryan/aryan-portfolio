@@ -94,21 +94,21 @@ export default function Home() {
       color: "from-purple-500/10 to-purple-800/10"
     },
     {
-      title: "Full Stack Development",
+      title: "Java Full Stack Development",
       icon: <Code className="w-6 h-6 text-blue-400" />,
-      skills: ["Spring Boot", "Next.js", "Node.js", "Express", "Hibernate", "Redux"],
+      skills: ["Spring Boot", "Hibernate/JPA", "MySQL","Next.js","React", "Redux"],
       color: "from-blue-500/10 to-blue-800/10"
     },
     {
-      title: "Mobile & Cloud",
+      title: "JavaScript Full Stack Development (MERN Stack)",
       icon: <Smartphone className="w-6 h-6 text-emerald-400" />,
-      skills: ["React Native", "Firebase", "AWS", "Docker", "Kubernetes", "CI/CD"],
+      skills: ["React", "Redux" ,"Express.js", "Node.js", "MongoDB", "React Native", "Firebase"],
       color: "from-emerald-500/10 to-emerald-800/10"
     },
     {
       title: "Specialized Skills",
       icon: <Lock className="w-6 h-6 text-amber-400" />,
-      skills: ["Kali Linux", "Cybersecurity", "TensorFlow", "Data Analysis", "System Design"],
+      skills: ["Java", "JavaScript", "React","Spring Boot", "Microservices","MySQL", "Linux"],
       color: "from-amber-500/10 to-amber-800/10"
     }
   ];
@@ -146,9 +146,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Enhanced Navigation Bar */}
-
-
       {/* Enhanced Hero Section */}
       <section className="relative pt-40 pb-28 px-6 overflow-hidden">
         {/* Animated background elements */}
