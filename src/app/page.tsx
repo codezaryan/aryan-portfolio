@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Code, Briefcase, Github, ExternalLink, Home, MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock } from "lucide-react";
+import { ArrowRight, Code, Briefcase, Github, ExternalLink,  MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock } from "lucide-react";
 export default function Home() {
   //   const skillCategories = [
   //   {
@@ -384,7 +384,7 @@ export default function Home() {
                 icon: <User className="h-8 w-8" />,
                 title: "About Me",
                 description: "My background and professional journey",
-                color: "from-purple-600/20 to-purple-800/20"
+                color: "from-pink-600/20 to-green-800/20"
               },
               {
                 href: "/projects",
@@ -405,7 +405,7 @@ export default function Home() {
                 icon: <Mail className="h-8 w-8" />,
                 title: "Contact",
                 description: "Let's discuss opportunities",
-                color: "from-amber-600/20 to-amber-800/20"
+                color: "from-pink-600/20 to-white-800/20"
               }
             ].map((item, index) => (
               <Link href={item.href} key={index}>
