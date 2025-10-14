@@ -3,7 +3,47 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Briefcase, Github, ExternalLink,  MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock, ChevronDown, Star, TrendingUp, Award } from "lucide-react";
+import { motion } from "framer-motion";
 export default function Home() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.25, 0.46, 0.45, 0.94] as const
+      }
+    }
+  };
+
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        delay: 0.8
+      }
+    },
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.2 }
+    },
+    tap: { scale: 0.95 }
+  };
 
   const skillCategories = [
     {
@@ -97,61 +137,131 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto text-center relative z-10">
-          <div className="animate-fade-in-up space-y-6">
+          <motion.div
+            className="space-y-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Title with gradient text and subtle shine */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-2">
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-2"
+              variants={itemVariants}
+            >
               <span className="bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text text-transparent relative">
                 Aryan Patel
-                <span className="absolute inset-0 bg-white/10 rounded-full blur-md animate-pulse-slow"></span>
+                <motion.span
+                  className="absolute inset-0 bg-white/10 rounded-full blur-md"
+                  animate={{
+                    opacity: [0.1, 0.3, 0.1],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                />
               </span>
-            </h1>
+            </motion.h1>
 
             {/* Subtitle with animated underline */}
-            <div className="inline-block relative">
+            <motion.div
+              className="inline-block relative"
+              variants={itemVariants}
+            >
               <h2 className="text-3xl md:text-4xl font-semibold text-purple-200 mb-1">
                 Full-Stack Developer
               </h2>
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full animate-width-pulse"></div>
-            </div>
+              <motion.div
+                className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full"
+                initial={{ width: 0 }}
+                animate={{ width: "75%" }}
+                transition={{
+                  duration: 1.5,
+                  delay: 1,
+                  ease: "easeInOut"
+                }}
+              />
+            </motion.div>
 
             {/* Description with animated typing effect */}
-            <div className="max-w-2xl mx-auto">
+            <motion.div
+              className="max-w-2xl mx-auto"
+              variants={itemVariants}
+            >
               <p className="text-xl md:text-2xl text-gray-300 mb-10 relative inline-block">
                 <span className="relative">
                   I build scalable full-stack web systems using React, Next.js, and Node.js.
-                  <span className="absolute right-0 top-0 w-1 h-8 bg-blue-400 animate-blink"></span>
+                  <motion.span
+                    className="absolute right-0 top-0 w-1 h-8 bg-blue-400"
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      ease: [1, 0, 1, 0]
+                    }}
+                  />
                 </span>
               </p>
-            </div>
+            </motion.div>
 
             {/* Buttons with improved hover effects */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/projects">
-                <Button
-                  size="lg"
-                  className="relative overflow-hidden group px-8 py-6 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all"
-                >
-                  <span className="relative z-10 flex items-center">
-                    View My Work
-                    <ArrowRight className="ml-2 h-5 w-5 z-10 transition-transform group-hover:translate-x-1" />
-                  </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="px-8 py-6 text-lg border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all group"
-                >
-                  <span className="relative z-10 flex items-center">
-                    Get In Touch
-                    <ArrowRight className="ml-2 h-5 w-5 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-1 group-hover:translate-x-0" />
-                  </span>
-                </Button>
-              </Link>
-            </div>
-          </div>
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4 justify-center"
+              variants={buttonVariants}
+            >
+              <motion.div
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
+              >
+                <Link href="/projects">
+                  <Button
+                    size="lg"
+                    className="relative overflow-hidden group px-8 py-6 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all"
+                  >
+                    <span className="relative z-10 flex items-center">
+                      View My Work
+                      <motion.div
+                        className="ml-2 h-5 w-5 z-10"
+                        whileHover={{ x: 4 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ArrowRight />
+                      </motion.div>
+                    </span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Button>
+                </Link>
+              </motion.div>
+              <motion.div
+                variants={buttonVariants}
+                whileHover="hover"
+                whileTap="tap"
+              >
+                <Link href="/contact">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="px-8 py-6 text-lg border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all group"
+                  >
+                    <span className="relative z-10 flex items-center">
+                      Get In Touch
+                      <motion.div
+                        className="ml-2 h-5 w-5 z-10"
+                        initial={{ opacity: 0, x: -4 }}
+                        whileHover={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <ArrowRight />
+                      </motion.div>
+                    </span>
+                  </Button>
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* Scroll indicator */}

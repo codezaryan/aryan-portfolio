@@ -19,27 +19,12 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        alert("Thank you for your message! I'll get back to you soon.")
-        setFormData({ name: "", email: "", subject: "", message: "" })
-      } else {
-        const error = await response.json()
-        alert(`Error: ${error.error}`)
-      }
-    } catch (error) {
-      console.error('Form submission error:', error)
-      alert('There was an error sending your message. Please try again.')
-    }
+    // Handle form submission here
+    console.log("Form submitted:", formData)
+    // You can integrate with email services like EmailJS, Formspree, etc.
+    // For now, we'll just log it
+    alert("Thank you for your message! I'll get back to you soon.")
+    setFormData({ name: "", email: "", subject: "", message: "" })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
