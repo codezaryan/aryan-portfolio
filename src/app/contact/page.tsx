@@ -60,18 +60,18 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24 pb-12">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-white mb-6 animate-fade-in-up">Get In Touch</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4 sm:mb-6 animate-fade-in-up">Get In Touch</h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in-up">
             Let's build something great together. I'm always excited to discuss new opportunities and innovative projects.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 max-w-6xl mx-auto">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-8">
             <Card className="bg-white/10 border-white/20 animate-slide-in-left">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-center">
@@ -98,7 +98,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-white font-semibold">Location</p>
-                      <p className="text-gray-300">Katni, Madhya Pradesh, India</p>
+                      <p className="text-gray-300">Bengaluru, India</p>
                     </div>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default function Contact() {
             </Card>
 
             <Card className="bg-white/10 border-white/20 animate-slide-in-left">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Follow Me</h2>
                 <div className="flex space-x-4">
                   <a
@@ -139,7 +139,7 @@ export default function Contact() {
             </Card>
 
             <Card className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-blue-500/30 animate-slide-in-left">
-              <CardContent className="p-8">
+              <CardContent className="p-4 sm:p-8">
                 <h3 className="text-xl font-bold text-white mb-4">Let's Work Together!</h3>
                 <p className="text-gray-300 mb-4">
                   I'm actively seeking opportunities in software development, particularly in:
@@ -177,7 +177,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <Card className="bg-white/10 border-white/20 animate-slide-in-right">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-8">
               <h2 className="text-2xl font-bold text-white mb-6">Send Me a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">

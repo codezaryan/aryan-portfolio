@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, X,  User, MessageSquare, Code, Briefcase, FileText, Mail } from "lucide-react"
+import { Menu, X,  User, MessageSquare, Code, Briefcase, FileText, Mail, History } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Navigation() {
@@ -48,6 +48,7 @@ export default function Navigation() {
     { href: "/about", label: "About", icon: <User className="w-5 h-5" /> },
     { href: "/projects", label: "Projects", icon: <Code className="w-5 h-5" /> },
     { href: "/services", label: "Services", icon: <Briefcase className="w-5 h-5" /> },
+    { href: "/timeline", label: "Timeline", icon: <History className="w-5 h-5" /> },
     { href: "/resume", label: "Resume", icon: <FileText className="w-5 h-5" /> },
     { href: "/contact", label: "Contact", icon: <Mail className="w-5 h-5" /> },
   ]
