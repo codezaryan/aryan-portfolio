@@ -13,9 +13,9 @@ export default function Home() {
         { name: "Java", level: "Advanced", proficiency: 90 },
         { name: "Python", level: "Advanced", proficiency: 85 },
         { name: "TypeScript", level: "Advanced", proficiency: 88 },
-        { name: "C/C++", level: "Intermediate", proficiency: 75 },
+        { name: "C/C++", level: "Advanced", proficiency: 75 },
         { name: "SQL", level: "Advanced", proficiency: 85 },
-        { name: "Bash", level: "Intermediate", proficiency: 70 }
+        { name: "Linux/Bash", level: "Advanced", proficiency: 80 }
       ],
       color: "from-blue-500/10 to-blue-800/10"
     },
@@ -23,12 +23,11 @@ export default function Home() {
       title: "Frameworks & Libraries",
       icon: <Code className="w-6 h-6 text-purple-400" />,
       skills: [
-        { name: "Spring Boot", level: "Advanced", proficiency: 90 },
-        { name: "React", level: "Advanced", proficiency: 88 },
-        { name: "Next.js", level: "Advanced", proficiency: 85 },
+        { name: "React/Next.js", level: "Advanced", proficiency: 88 },
         { name: "Node.js", level: "Advanced", proficiency: 82 },
         { name: "Express.js", level: "Advanced", proficiency: 80 },
-        { name: "Hibernate", level: "Intermediate", proficiency: 75 }
+        { name: "Spring Boot", level: "Professional", proficiency: 75 },
+        { name: "React Native", level: "Intermidiate", proficiency: 60 },
       ],
       color: "from-purple-500/10 to-purple-800/10"
     },
@@ -36,12 +35,12 @@ export default function Home() {
       title: "Tools & DevOps",
       icon: <Zap className="w-6 h-6 text-emerald-400" />,
       skills: [
-        { name: "Git", level: "Advanced", proficiency: 85 },
+        { name: "Version Control" , level: "Advanced", proficiency: 90 },
+        { name: "CI/CD", level: "Intermediate", proficiency: 65 },
+        { name: "Linux", level: "Advanced", proficiency: 80 },
         { name: "Docker", level: "Intermediate", proficiency: 75 },
         { name: "AWS", level: "Intermediate", proficiency: 70 },
-        { name: "Linux", level: "Advanced", proficiency: 80 },
-        { name: "MongoDB", level: "Advanced", proficiency: 82 },
-        { name: "PostgreSQL", level: "Advanced", proficiency: 78 }
+        { name: "Kubernetes", level: "Beginner", proficiency: 50 },
       ],
       color: "from-emerald-500/10 to-emerald-800/10"
     }
@@ -57,30 +56,12 @@ export default function Home() {
       image: "/api/placeholder/400/300"
     },
     {
-      title: "Task Manager",
-      description: "Comprehensive task management system with real-time updates, deadline notifications, and secure JWT authentication. Features role-based access control.",
-      tags: ["Next.js", "MongoDB", "JWT", "Real-time Updates"],
-      link: "https://full-stack-work-manager-2.vercel.app/",
-      github: "https://github.com/codezaryan/full-stack-work-manager-2",
-      problem: "Addressed the need for efficient team collaboration and project tracking by building a scalable task management solution with real-time synchronization.",
-      image: "/api/placeholder/400/300"
-    },
-    {
       title: "Employee Management System",
       description: "Spring Boot backend with Next.js frontend for comprehensive employee data management, featuring advanced search, filtering, and reporting capabilities.",
       tags: ["Spring Boot","MySQL","Next.js"],
       link: "https://codezaryan/not-deployed-yet",
       github: "https://github.com/codezaryan/spring-next",
       problem: "Streamlined HR operations and employee data management processes through a robust full-stack application with advanced data handling capabilities.",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      title: "Cybersecurity Dashboard",
-      description: "Penetration testing results visualization tool with vulnerability tracking and automated reporting. Built with Python and modern web technologies.",
-      tags: ["Python", "Django", "Kali Linux", "Nmap"],
-      link: "#",
-      github: "#",
-      problem: "Improved security assessment workflows and vulnerability management by creating an intuitive dashboard for penetration testing results and automated reporting.",
       image: "/api/placeholder/400/300"
     }
   ];
@@ -109,20 +90,21 @@ export default function Home() {
             {/* Subtitle with animated underline */}
             <div className="inline-block relative">
               <h2 className="text-3xl md:text-4xl font-semibold text-purple-200 mb-1">
-                Full-Stack Developer
+                Software Developer
               </h2>
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full animate-width-pulse"></div>
             </div>
 
-            {/* Description with animated typing effect */}
+         {/* Description with animated typing effect */}
             <div className="max-w-2xl mx-auto">
-              <p className="text-xl md:text-2xl text-gray-300 mb-10 relative inline-block">
-                <span className="relative">
-                  I build scalable full-stack web systems using React, Next.js, and Node.js.
-                  <span className="absolute right-0 top-0 w-1 h-8 bg-blue-400 animate-blink"></span>
+              <p className="text-xl md:text-2xl text-gray-300 mb-10 text-center">
+                <span className="relative inline-flex items-end whitespace-nowrap">
+                  I build scalable full-stack solutions
+                  <span className="ml-1 h-[1.4em] w-[2px] bg-blue-400 animate-blink" />
                 </span>
               </p>
             </div>
+
 
             {/* Buttons with improved hover effects */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
