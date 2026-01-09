@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Briefcase, Github, ExternalLink,  MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock, ChevronDown, Star, TrendingUp, Award } from "lucide-react";
+import Hero from "./hero/hero";
+import Hero1 from "./hero/hero1";
 export default function Home() {
 
   const skillCategories = [
@@ -70,79 +72,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Enhanced Hero Section */}
-      <section className="relative pt-40 pb-28 px-6 overflow-hidden">
-        {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-900/30 blur-[80px]"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-80 h-80 rounded-full bg-purple-900/20 blur-[100px]"></div>
-        </div>
-
-        <div className="container mx-auto text-center relative z-10">
-          <div className="animate-fade-in-up space-y-6">
-            {/* Title with gradient text and subtle shine */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-2">
-              <span className="bg-gradient-to-r from-blue-300 via-white to-purple-300 bg-clip-text text-transparent relative">
-                Aryan Patel
-                <span className="absolute inset-0 bg-white/10 rounded-full blur-md animate-pulse-slow"></span>
-              </span>
-            </h1>
-
-            {/* Subtitle with animated underline */}
-            <div className="inline-block relative">
-              <h2 className="text-3xl md:text-4xl font-semibold text-purple-200 mb-1">
-                Software Developer
-              </h2>
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-3/4 h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent rounded-full animate-width-pulse"></div>
-            </div>
-
-         {/* Description with animated typing effect */}
-            <div className="max-w-2xl mx-auto">
-              <p className="text-xl md:text-2xl text-gray-300 mb-10 text-center">
-                <span className="relative inline-flex items-end whitespace-nowrap">
-                  I build scalable full-stack solutions
-                  <span className="ml-1 h-[1.4em] w-[2px] bg-blue-400 animate-blink" />
-                </span>
-              </p>
-            </div>
-
-
-            {/* Buttons with improved hover effects */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/projects">
-                <Button
-                  size="lg"
-                  className="relative overflow-hidden group px-8 py-6 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition-all"
-                >
-                  <span className="relative z-10 flex items-center">
-                    View My Work
-                    <ArrowRight className="ml-2 h-5 w-5 z-10 transition-transform group-hover:translate-x-1" />
-                  </span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="px-8 py-6 text-lg border-white/40 text-white hover:bg-white/10 hover:border-white/60 transition-all group"
-                >
-                  <span className="relative z-10 flex items-center">
-                    Get In Touch
-                    <ArrowRight className="ml-2 h-5 w-5 z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-x-1 group-hover:translate-x-0" />
-                  </span>
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
-            <ChevronDown className="w-4 h-4 text-blue-400 animate-scroll-indicator" />
-          </div>
-        </div>
-      </section>
+       <Hero1/>
 
       {/* Skills Section */}
       <section className="py-20 px-4 sm:px-6">
