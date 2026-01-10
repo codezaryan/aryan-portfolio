@@ -5,7 +5,7 @@ import RotatingIconsRing from '@/components/ui/rotating-icon-ring/rotating.icon.
 
 export default function Hero() {
   return (
-    <div className='relative min-h-screen overflow-hidden' style={{ backgroundColor: 'rgb(18, 18, 18)' }}>
+    <div className='relative min-h-screen overflow-hidden lg:px-20' style={{ backgroundColor: 'rgb(18, 18, 18)' }}>
       
       {/* === PURE PURPLE GRID LINES ON DARK BACKGROUND === */}
       <div className="absolute inset-0" style={{ backgroundColor: 'rgb(18, 18, 18)' }}>
@@ -392,15 +392,13 @@ export default function Hero() {
         
         {/* Purple Grid Scroll Indicator */}
         <motion.div 
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3"
+          className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3"
           style={{ backgroundColor: 'rgb(18, 18, 18)' }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8, duration: 0.8 }}
         >
-          <span className="text-sm font-medium tracking-wider" style={{ color: 'rgba(192, 132, 252, 0.7)' }}>
-            SCROLL
-          </span>
+   
           <div className="relative">
             {/* Purple Grid Lines in Scroll Indicator */}
             <div className="absolute -inset-4 opacity-20" style={{
