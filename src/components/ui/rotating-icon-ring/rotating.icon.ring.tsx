@@ -24,19 +24,19 @@ const RotatingIconsRing: React.FC<RotatingIconsRingProps> = ({
   innerRadius = 160,
   outerRadius = 210,
   innerIcons = [
-    { icon: SiSpringboot, name: "Spring Boot" },
-    { icon: SiHibernate, name: "Hibernate" },
-    { icon: SiMongodb, name: "MongoDB" },
-        { icon: SiMongodb, name: "MongoDB" },
-            { icon: SiMongodb, name: "MongoDB" }
+    { icon: SiSpringboot, name: "Spring Boot", color: "#6DB33F" },
+    { icon: SiHibernate, name: "Hibernate", color: "#59666C" },
+    { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+    { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+    { icon: SiMongodb, name: "MongoDB", color: "#47A248" }
   ],
   outerIcons = [
-    { icon: SiMongodb, name: "MongoDB" },
-    { icon: SiExpress, name: "Express.js" },
-    { icon: SiReact, name: "React" },
-    { icon: SiNodedotjs, name: "Node.js" },
-        { icon: SiMongodb, name: "MongoDB" },
-            { icon: SiMongodb, name: "MongoDB" }
+    { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+    { icon: SiExpress, name: "Express.js", color: "#000000" },
+    { icon: SiReact, name: "React", color: "#61DAFB" },
+    { icon: SiNodedotjs, name: "Node.js", color: "#339933" },
+    { icon: SiMongodb, name: "MongoDB", color: "#47A248" },
+    { icon: SiMongodb, name: "MongoDB", color: "#47A248" }
   ],
   rotationSpeed = 15,
   iconSize = 36
