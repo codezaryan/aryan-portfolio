@@ -137,7 +137,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute pt-16 left-1/2 transform -translate-x-1/2 animate-bounce">
           <div className="w-6 h-10 border-2 border-blue-400 rounded-full flex justify-center">
             <ChevronDown className="w-4 h-4 text-blue-400 animate-scroll-indicator" />
           </div>

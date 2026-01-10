@@ -44,7 +44,7 @@ const RotatingIconsRing: React.FC<RotatingIconsRingProps> = ({
   const rotation = useRotation(rotationSpeed);
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-transparent bg-gradient-to-br from-purple-900 via-purple-800 to-indigo-900 p-8">
+    <div className="flex items-center justify-center min-h-screen relative pt-20 pb-28 px-6 overflow-hidden">
       <div 
         className="relative" 
         style={{ 

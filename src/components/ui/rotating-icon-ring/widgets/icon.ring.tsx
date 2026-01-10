@@ -6,6 +6,7 @@ import GlassmorphicIcon from './glassmorphic.icon';
 export interface IconAndNames {
   icon: React.ElementType;
   name: string;
+  color: string;
 }
 
 
