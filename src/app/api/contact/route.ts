@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { ContactController } from './controller/contact.controller'
+
+const contactController = new ContactController();
 
 export async function POST(request: NextRequest) {
   try {
@@ -21,42 +24,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Here you would typically send the email using a service like:
-    // - SendGrid
-    // - Mailgun
-    // - Resend
-    // - NodeMailer with SMTP
 
-    // For now, we'll just log it and return success
-    console.log('Contact form submission:', {
-      name,
-      email,
-      subject,
-      message,
-      timestamp: new Date().toISOString()
-    })
-
-    // In a real implementation, you would send an email here
-    // Example with a service like Resend:
-    /*
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    await resend.emails.send({
-      from: 'your-email@example.com',
-      to: 'aryanpatel7987@gmail.com',
-      subject: `Portfolio Contact: ${subject}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message.replace(/\n/g, '<br>')}</p>
-      `
-    })
-    */
+   const res = await contactController.handleSendEmailRequest({ name, email, subject, message })
 
     return NextResponse.json(
-      { message: 'Message sent successfully!' },
+      { message: 'Email sent successfully', info: res },
       { status: 200 }
     )
 
