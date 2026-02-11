@@ -1,15 +1,23 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useMemo } from 'react'
 import RotatingIconsRing from '@/components/ui/rotating-icon-ring/rotating.icon.ring'
 
 export default function Hero() {
+  const particlePositions = useMemo(() => {
+    return [...Array(25)].map(() => ({
+      left: `${Math.floor(Math.random() * 100)}%`,
+      top: `${Math.floor(Math.random() * 100)}%`,
+    }));
+  }, []);
+
   return (
     <div className='relative min-h-screen overflow-hidden lg:px-20' style={{ backgroundColor: 'rgb(18, 18, 18)' }}>
-      
+
       {/* === PURE PURPLE GRID LINES ON DARK BACKGROUND === */}
       <div className="absolute inset-0" style={{ backgroundColor: 'rgb(18, 18, 18)' }}>
-        
+
         {/* Primary Purple Horizontal Grid Lines */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
@@ -23,7 +31,7 @@ export default function Hero() {
           `,
           backgroundSize: '100% 50px',
         }} />
-        
+
         {/* Primary Purple Vertical Grid Lines */}
         <div className="absolute inset-0" style={{
           backgroundImage: `
@@ -37,7 +45,7 @@ export default function Hero() {
           `,
           backgroundSize: '50px 100%',
         }} />
-        
+
         {/* Diagonal Purple Lines (Subtle) */}
         <div className="absolute inset-0 opacity-10" style={{
           backgroundImage: `
@@ -57,24 +65,25 @@ export default function Hero() {
             )
           `,
         }} />
-        
+
         {/* Corner Purple Accent Lines */}
         <div className="absolute top-0 left-0 w-48 h-48 border-l-2 border-t-2" style={{ borderColor: 'rgba(147, 51, 234, 0.3)' }} />
         <div className="absolute top-0 right-0 w-48 h-48 border-r-2 border-t-2" style={{ borderColor: 'rgba(147, 51, 234, 0.3)' }} />
         <div className="absolute bottom-0 left-0 w-48 h-48 border-l-2 border-b-2" style={{ borderColor: 'rgba(147, 51, 234, 0.3)' }} />
         <div className="absolute bottom-0 right-0 w-48 h-48 border-r-2 border-b-2" style={{ borderColor: 'rgba(147, 51, 234, 0.3)' }} />
-        
+
         {/* Purple Glow Particles on Grid */}
         {[...Array(25)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute"
+            suppressHydrationWarning={true}
             style={{
               width: '1px',
               height: '1px',
               backgroundColor: 'rgb(147, 51, 234)',
-              left: `${Math.floor(Math.random() * 100)}%`,
-              top: `${Math.floor(Math.random() * 100)}%`,
+              left: particlePositions[i].left,
+              top: particlePositions[i].top,
             }}
             animate={{
               boxShadow: [
@@ -150,7 +159,7 @@ export default function Hero() {
                   boxShadow: '0 0 15px rgba(147, 51, 234, 0.2)',
                 }}>
                   <span className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: 'rgb(147, 51, 234)' }} />
-                  Software Developer & Founder
+                  Software Developer & Freelancer
                 </span>
               </motion.div>
               
@@ -173,16 +182,16 @@ export default function Hero() {
                 }}>Aryan</span>
                 <br />
                 <span className="text-3xl md:text-4xl lg:text-5xl mt-4 block" style={{ color: 'rgba(255, 255, 255, 0.85)' }}>
-                  A Founder @ <span style={{ 
+                  Follow @ <span style={{ 
                     color: 'rgb(192, 132, 252)',
                     textShadow: '0 0 10px rgba(147, 51, 234, 0.5)'
-                  }}>NXTVEL_</span>
+                  }}>codezaryan</span>
                 </span>
               </motion.h1>
               
               {/* Description */}
               <motion.p
-                className="text-lg leading-relaxed mb-8"
+                className="text-lg leading-relaxed mb-8 sm:mr-10"
                 style={{ 
                   color: 'rgba(255, 255, 255, 0.75)',
                   backgroundColor: 'rgb(18, 18, 18)'
@@ -191,9 +200,9 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
-                I'm Aryan, a passionate Software Developer and Founder of NXTVEL Technologies. 
-                I specialize in building fast, scalable, and secure web applications using the 
-                MERN stack (MongoDB, Express, React, Node.js) and Next.js. I focus on system design, 
+                I'm Aryan, a passionate Software Developer at Peerme Software Technologies Bengaluru. 
+                I specialize in building fast, scalable, end-to-end and secure web applications using the 
+                MERN stack and Java. I focus on system design, 
                 performance optimization, and automation to deliver real-world business value.
               </motion.p>
               
@@ -217,7 +226,7 @@ export default function Hero() {
               
               {/* CTA Buttons */}
               <motion.div 
-                className="flex flex-wrap gap-4"
+                className="flex justify-center flex-wrap gap-4 mr-2"
                 style={{ backgroundColor: 'rgb(18, 18, 18)' }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -238,9 +247,9 @@ export default function Hero() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span>View Projects</span>
+                  {/* <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'white' }} />
                   <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'white' }} />
-                  <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'white' }} />
-                  <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'white' }} />
+                  <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'white' }} /> */}
                 </motion.a>
                 
                 <motion.a
@@ -329,11 +338,12 @@ export default function Hero() {
               {[...Array(12)].map((_, i) => {
                 const angle = (i * 30) * Math.PI / 180;
                 const radius = 280;
-                
+
                 return (
                   <motion.div
                     key={i}
                     className="absolute rounded-full"
+                    suppressHydrationWarning={true}
                     style={{
                       width: '4px',
                       height: '4px',

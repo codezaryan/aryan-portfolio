@@ -1,72 +1,16 @@
+import React from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Code, Briefcase, Github, ExternalLink,  MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock, ChevronDown, Star, TrendingUp, Award } from "lucide-react";
-import Hero from "./hero/hero";
+import { ArrowRight, Briefcase, User, Mail, Code } from "lucide-react";
 import Hero1 from "./hero/hero1";
-export default function Home() {
+import { skillCategories, projects } from "@/lib/config";
+import { SkillCard } from "@/components/home/SkillCard";
+import { ProjectCard } from "@/components/home/ProjectCard";
+import ChatBot from "@/components/chatbot/ChatBot";
 
-  const skillCategories = [
-    {
-      title: "Languages",
-      icon: <Cpu className="w-6 h-6 text-blue-400" />,
-      skills: [
-        { name: "Java", level: "Advanced", proficiency: 90 },
-        { name: "Python", level: "Advanced", proficiency: 85 },
-        { name: "TypeScript", level: "Advanced", proficiency: 88 },
-        { name: "C/C++", level: "Advanced", proficiency: 75 },
-        { name: "SQL", level: "Advanced", proficiency: 85 },
-        { name: "Linux/Bash", level: "Advanced", proficiency: 80 }
-      ],
-      color: "from-blue-500/10 to-blue-800/10"
-    },
-    {
-      title: "Frameworks & Libraries",
-      icon: <Code className="w-6 h-6 text-purple-400" />,
-      skills: [
-        { name: "React/Next.js", level: "Advanced", proficiency: 88 },
-        { name: "Node.js", level: "Advanced", proficiency: 82 },
-        { name: "Express.js", level: "Advanced", proficiency: 80 },
-        { name: "Spring Boot", level: "Professional", proficiency: 75 },
-        { name: "React Native", level: "Intermidiate", proficiency: 60 },
-      ],
-      color: "from-purple-500/10 to-purple-800/10"
-    },
-    {
-      title: "Tools & DevOps",
-      icon: <Zap className="w-6 h-6 text-emerald-400" />,
-      skills: [
-        { name: "Version Control" , level: "Advanced", proficiency: 90 },
-        { name: "CI/CD", level: "Intermediate", proficiency: 65 },
-        { name: "Linux", level: "Advanced", proficiency: 80 },
-        { name: "Docker", level: "Intermediate", proficiency: 75 },
-        { name: "AWS", level: "Intermediate", proficiency: 70 },
-        { name: "Kubernetes", level: "Beginner", proficiency: 50 },
-      ],
-      color: "from-emerald-500/10 to-emerald-800/10"
-    }
-  ];
-  const projects = [
-    {
-      title: "ReserveTable",
-      description: "Full-stack restaurant booking platform with Google Maps integration and real-time confirmations. Built with Next.js, PostgreSQL, and modern UI/UX principles.",
-      tags: ["Next.js", "PostgreSQL", "Google Maps API", "Tailwind CSS"],
-      link: "https://restaurant-nextjs-orpin.vercel.app/",
-      github: "https://github.com/codezaryan/restaurant-booking",
-      problem: "Solved the challenge of fragmented restaurant discovery and booking processes by creating a unified platform with real-time availability and seamless user experience.",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      title: "Employee Management System",
-      description: "Spring Boot backend with Next.js frontend for comprehensive employee data management, featuring advanced search, filtering, and reporting capabilities.",
-      tags: ["Spring Boot","MySQL","Next.js"],
-      link: "https://codezaryan/not-deployed-yet",
-      github: "https://github.com/codezaryan/spring-next",
-      problem: "Streamlined HR operations and employee data management processes through a robust full-stack application with advanced data handling capabilities.",
-      image: "/api/placeholder/400/300"
-    }
-  ];
+export default function Home() {
 
 
   return (
@@ -91,42 +35,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {skillCategories.map((category, index) => (
-              <Card
-                key={index}
-                className={`bg-gradient-to-b ${category.color} border border-white/10 hover:border-white/30 transition-all duration-300 group hover:-translate-y-2 animate-stagger`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardHeader className="flex flex-row items-center space-y-0 space-x-4 pb-4">
-                  <div className="p-3 rounded-lg bg-black/20 border border-white/10 group-hover:bg-blue-600/20 transition-colors">
-                    {category.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{category.title}</h3>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm font-medium text-gray-200">{skill.name}</span>
-                          <span className={`text-xs px-2 py-1 rounded-full ${
-                            skill.level === 'Advanced' ? 'bg-green-500/20 text-green-300' :
-                            skill.level === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-300' :
-                            'bg-blue-500/20 text-blue-300'
-                          }`}>
-                            {skill.level}
-                          </span>
-                        </div>
-                        <div className="w-full bg-gray-700 rounded-full h-2">
-                          <div
-                            className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                            style={{ width: `${skill.proficiency}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <SkillCard key={index} category={category} index={index} />
             ))}
           </div>
 
@@ -162,60 +71,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <Card
-                key={index}
-                className="bg-gradient-to-b from-slate-800/50 to-slate-900/50 border border-white/10 hover:border-blue-400/30 transition-all duration-300 group hover:-translate-y-2 hover:rotate-1 animate-stagger overflow-hidden"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                <div className="relative overflow-hidden">
-                  <div className="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                    <Code className="w-16 h-16 text-blue-400/50" />
-                  </div>
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-center">
-                      <p className="text-white text-sm font-medium mb-2">View Project</p>
-                      <div className="flex gap-2 justify-center">
-                        <ExternalLink className="w-5 h-5 text-white" />
-                        <Github className="w-5 h-5 text-white" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <CardHeader>
-                  <h3 className="text-2xl font-semibold text-white group-hover:text-blue-300 transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-blue-400 font-medium">{project.problem}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 mb-6">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge
-                        key={tagIndex}
-                        variant="outline"
-                        className="text-xs font-mono px-3 py-1 bg-white/5 text-gray-200 border-white/10"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Link href={project.github} target="_blank">
-                    <Button variant="ghost" size="sm" className="text-gray-300 hover:text-white">
-                      <Github className="w-4 h-4 mr-2" />
-                      Source Code
-                    </Button>
-                  </Link>
-                  <Link href={project.link} target="_blank">
-                    <Button variant="outline" size="sm" className="border-blue-400 text-blue-400 hover:bg-blue-400/10">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
+              <ProjectCard key={index} project={project} index={index} />
             ))}
           </div>
 

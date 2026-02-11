@@ -16,6 +16,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://codezaryan.netlify.app"),
   title: "Aryan Patel - Full-Stack Developer",
   description: "Full-Stack Developer specializing in building scalable web systems using React, Next.js, and Node.js. Expert in modern web technologies and cloud solutions.",
   keywords: [

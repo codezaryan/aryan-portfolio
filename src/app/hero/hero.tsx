@@ -3,68 +3,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Code, Briefcase, Github, ExternalLink,  MessageSquare, Menu, User, Mail, FileText, Zap, Cpu, Smartphone, Lock, ChevronDown, Star, TrendingUp, Award } from "lucide-react";
-export default function Hero() {
+import { skillCategories, projects } from "@/lib/config";
 
-  const skillCategories = [
-    {
-      title: "Languages",
-      icon: <Cpu className="w-6 h-6 text-blue-400" />,
-      skills: [
-        { name: "Java", level: "Advanced", proficiency: 90 },
-        { name: "Python", level: "Advanced", proficiency: 85 },
-        { name: "TypeScript", level: "Advanced", proficiency: 88 },
-        { name: "C/C++", level: "Advanced", proficiency: 75 },
-        { name: "SQL", level: "Advanced", proficiency: 85 },
-        { name: "Linux/Bash", level: "Advanced", proficiency: 80 }
-      ],
-      color: "from-blue-500/10 to-blue-800/10"
-    },
-    {
-      title: "Frameworks & Libraries",
-      icon: <Code className="w-6 h-6 text-purple-400" />,
-      skills: [
-        { name: "React/Next.js", level: "Advanced", proficiency: 88 },
-        { name: "Node.js", level: "Advanced", proficiency: 82 },
-        { name: "Express.js", level: "Advanced", proficiency: 80 },
-        { name: "Spring Boot", level: "Professional", proficiency: 75 },
-        { name: "React Native", level: "Intermidiate", proficiency: 60 },
-      ],
-      color: "from-purple-500/10 to-purple-800/10"
-    },
-    {
-      title: "Tools & DevOps",
-      icon: <Zap className="w-6 h-6 text-emerald-400" />,
-      skills: [
-        { name: "Version Control" , level: "Advanced", proficiency: 90 },
-        { name: "CI/CD", level: "Intermediate", proficiency: 65 },
-        { name: "Linux", level: "Advanced", proficiency: 80 },
-        { name: "Docker", level: "Intermediate", proficiency: 75 },
-        { name: "AWS", level: "Intermediate", proficiency: 70 },
-        { name: "Kubernetes", level: "Beginner", proficiency: 50 },
-      ],
-      color: "from-emerald-500/10 to-emerald-800/10"
-    }
-  ];
-  const projects = [
-    {
-      title: "ReserveTable",
-      description: "Full-stack restaurant booking platform with Google Maps integration and real-time confirmations. Built with Next.js, PostgreSQL, and modern UI/UX principles.",
-      tags: ["Next.js", "PostgreSQL", "Google Maps API", "Tailwind CSS"],
-      link: "https://restaurant-nextjs-orpin.vercel.app/",
-      github: "https://github.com/codezaryan/restaurant-booking",
-      problem: "Solved the challenge of fragmented restaurant discovery and booking processes by creating a unified platform with real-time availability and seamless user experience.",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      title: "Employee Management System",
-      description: "Spring Boot backend with Next.js frontend for comprehensive employee data management, featuring advanced search, filtering, and reporting capabilities.",
-      tags: ["Spring Boot","MySQL","Next.js"],
-      link: "https://codezaryan/not-deployed-yet",
-      github: "https://github.com/codezaryan/spring-next",
-      problem: "Streamlined HR operations and employee data management processes through a robust full-stack application with advanced data handling capabilities.",
-      image: "/api/placeholder/400/300"
-    }
-  ];
+export default function Hero() {
 
 
   return (

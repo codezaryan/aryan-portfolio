@@ -1,43 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Code, Database, Brain, Smartphone, Globe, BarChart3, Server, Shield, Cloud, Zap } from "lucide-react"
+import { servicesData } from "@/lib/config"
+
+const iconMap = {
+  Globe: Globe,
+  Server: Server,
+  Smartphone: Smartphone,
+  Cloud: Cloud,
+  Code: Code,
+  Database: Database,
+  Brain: Brain,
+  Shield: Shield,
+  Zap: Zap,
+  BarChart3: BarChart3
+};
 
 export default function Services() {
-  const services = [
-    {
-      icon: Globe,
-      title: "Full-Stack Web Development",
-      description:
-        "End-to-end web application development using modern technologies like Next.js, React, Node.js, and databases.",
-      skills: ["Next.js", "React", "Node.js", "Spring Boot", "MySQL", "Web UI/UX"],
-      deliverables: ["Responsive web applications", "RESTful APIs", "Database design", "Deployment & hosting"],
-      color: "from-blue-600/20 to-blue-900/20"
-    },
-    {
-      icon: Server,
-      title: "API Design & Development",
-      description: "Robust API development and third-party service integrations for seamless connectivity.",
-      skills: ["REST APIs", "GraphQL", "Microservices", "API Security"],
-      deliverables: ["RESTful APIs", "API documentation", "Third-party integrations", "API testing"],
-      color: "from-purple-600/20 to-purple-900/20"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Cross-platform mobile applications using React Native and modern mobile development practices.",
-      skills: ["React Native", "TypeScript", "Spring Boot", "MySQL", "Mobile UI/UX"],
-      deliverables: ["iOS & Android apps", "App store deployment", "Push notifications", "Offline functionality"],
-      color: "from-emerald-600/20 to-emerald-900/20"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Deployment & DevOps",
-      description: "Efficient cloud deployment and DevOps practices for scalable and reliable applications.",
-      skills: ["Docker/Kubernetes", "AWS", "CI/CD (GitHub Actions/GitLab)", "Cloud Architecture"],
-      deliverables: ["Cloud deployment", "CI/CD pipelines", "Infrastructure as Code", "Monitoring & logging"],
-      color: "from-amber-600/20 to-amber-900/20"
-    }
-  ]
+  const services = servicesData.map(service => ({
+    ...service,
+    icon: iconMap[service.icon as keyof typeof iconMap]
+  }));
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-24 pb-12">

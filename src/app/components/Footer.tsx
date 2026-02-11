@@ -52,7 +52,7 @@ export default function Footer() {
               <h3 className="text-2xl font-bold text-white">Aryan Patel</h3>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Full-Stack Developer specializing in building high-performance applications with modern technologies.
+              Full-Stack Software Developer specializing in building high-performance applications with modern technologies.
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">

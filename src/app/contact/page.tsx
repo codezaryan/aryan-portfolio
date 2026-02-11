@@ -8,7 +8,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Download, FileText } from "lucide-react"
+<<<<<<< HEAD
 import axios from "axios"
+=======
+import { contactInfo, siteConfig } from "@/lib/config"
+>>>>>>> 0a65c50 (a big fix in code structure)
 
 export default function Contact() {
 

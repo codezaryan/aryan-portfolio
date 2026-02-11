@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import UserAvatar from './widgets/user.avatar';
 import IconRing, { IconAndNames } from './widgets/icon.ring';
 import DecorativeRing from './widgets/decorative.rings';
@@ -23,9 +23,9 @@ const RotatingIconsRing: React.FC = () => {
   const isLg = useMediaQuery('(min-width: 1024px)');
   const isXl = useMediaQuery('(min-width: 1280px)');
 
-  const innerRadius = isXl ? 200 : isLg ? 170 : 120;
-  const outerRadius = isXl ? 270 : isLg ? 230 : 170;
-  const iconSize = isXl ? 44 : isLg ? 40 : 32;
+  const innerRadius = useMemo(() => isXl ? 200 : isLg ? 170 : 120, [isXl, isLg]);
+  const outerRadius = useMemo(() => isXl ? 270 : isLg ? 230 : 170, [isXl, isLg]);
+  const iconSize = useMemo(() => isXl ? 44 : isLg ? 40 : 32, [isXl, isLg]);
 
   return (
     <div className="flex items-center justify-center relative overflow-hidden">

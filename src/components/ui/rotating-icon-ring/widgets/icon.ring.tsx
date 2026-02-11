@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { LucideIcon } from 'lucide-react';
 
 import GlassmorphicIcon from './glassmorphic.icon';
