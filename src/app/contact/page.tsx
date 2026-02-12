@@ -8,15 +8,10 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Phone, MapPin, Send, Github, Linkedin, Download, FileText } from "lucide-react"
-<<<<<<< HEAD
 import axios from "axios"
-=======
 import { contactInfo, siteConfig } from "@/lib/config"
->>>>>>> 0a65c50 (a big fix in code structure)
 
 export default function Contact() {
-
-
 
   const [formData, setFormData] = useState({
     name: "",
@@ -52,7 +47,7 @@ export default function Contact() {
   const handleDownloadResume = () => {
     // Create a link to download resume
     const link = document.createElement('a')
-    link.href = '/resume.pdf' // You'll need to add this file to public folder
+    link.href = siteConfig.resumePath
     link.download = 'Aryan_Patel_Resume.pdf'
     link.click()
   }
@@ -80,7 +75,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-white font-semibold">Email</p>
-                      <p className="text-gray-300">aryanpatel7987@gmail.com</p>
+                      <p className="text-gray-300">{contactInfo.email}</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -89,7 +84,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-white font-semibold">Phone</p>
-                      <p className="text-gray-300">+91-7987419262</p>
+                      <p className="text-gray-300">{contactInfo.phone}</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -98,7 +93,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-white font-semibold">Location</p>
-                      <p className="text-gray-300">Katni, Madhya Pradesh, India</p>
+                      <p className="text-gray-300">{contactInfo.location}</p>
                     </div>
                   </div>
                 </div>
@@ -110,7 +105,7 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-white mb-6">Follow Me</h2>
                 <div className="flex space-x-4">
                   <a
-                    href="https://github.com/aryanpatel7987"
+                    href={contactInfo.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
@@ -119,7 +114,7 @@ export default function Contact() {
                     <Github className="h-6 w-6 text-white" />
                   </a>
                   <a
-                    href="https://linkedin.com/in/aryanpatel7987"
+                    href={contactInfo.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
@@ -128,7 +123,7 @@ export default function Contact() {
                     <Linkedin className="h-6 w-6 text-white" />
                   </a>
                   <a
-                    href="mailto:aryanpatel7987@gmail.com"
+                    href={`mailto:${contactInfo.email}`}
                     className="p-3 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                     aria-label="Send me an email"
                   >
